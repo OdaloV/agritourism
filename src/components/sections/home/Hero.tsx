@@ -8,11 +8,12 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format&fit=crop"
-          alt="Beautiful farmland landscape with rolling hills and golden sunset"
+          src="/images/hero-farm.jpg"
+          alt="Beautiful farmland landscape with rolling hills"
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30" />
       </div>
