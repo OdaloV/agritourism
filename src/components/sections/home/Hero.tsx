@@ -1,80 +1,54 @@
 import { Button } from "@/components/ui/button";
-import { Search, Calendar, MapPin } from "lucide-react";
+import { Search } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
   return (
     <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-farm.jpg"
-          alt="Beautiful farmland landscape with rolling hills"
+          alt="Kenyan farm landscape with rolling hills"
           fill
           className="object-cover"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-secondary/60" />
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-4 py-20 text-center text-white">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-          Discover Authentic
-          <span className="block text-secondary">Farm Experiences</span>
-        </h1>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-200">
-          Connect with nature, learn about sustainable farming, and create
-          unforgettable memories on working farms around the country.
-        </p>
+      <div className="container relative z-10 px-4 py-20">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Glassmorphism heading container */}
+          <div className="inline-block mb-6 px-8 py-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl">
+            <h1 className="text-4xl font-heading font-bold tracking-tight sm:text-5xl md:text-6xl text-white drop-shadow-lg">
+              Discover Authentic
+              <span className="block text-accent">Farm Experiences</span>
+            </h1>
+          </div>
 
-        {/* Search Bar */}
-        <div className="mx-auto max-w-4xl rounded-lg bg-white p-2 shadow-lg">
-          <div className="flex flex-col gap-2 md:flex-row">
-            <div className="flex flex-1 items-center gap-2 rounded-md px-3 py-2">
-              <Search className="h-5 w-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search for farms, activities, or locations"
-                className="w-full outline-none text-gray-900 placeholder:text-gray-400"
-              />
-            </div>
-            <div className="flex items-center gap-2 rounded-md px-3 py-2 border-l md:border-l">
-              <Calendar className="h-5 w-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Select dates"
-                className="w-full outline-none text-gray-900 placeholder:text-gray-400"
-              />
-            </div>
-            <div className="flex items-center gap-2 rounded-md px-3 py-2 border-l md:border-l">
-              <MapPin className="h-5 w-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Location"
-                className="w-full outline-none text-gray-900 placeholder:text-gray-400"
-              />
-            </div>
-            <Button className="bg-primary hover:bg-primary/90 text-white px-8">
-              Search
-            </Button>
-          </div>
-        </div>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-white/90 drop-shadow-lg bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+            Connect with nature, learn about sustainable farming, and create
+            unforgettable memories on working farms across Kenya.
+          </p>
 
-        {/* Stats */}
-        <div className="mt-12 flex flex-wrap justify-center gap-8">
-          <div className="text-center">
-            <div className="text-2xl font-bold">500+</div>
-            <div className="text-sm text-gray-300">Verified Farms</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">50k+</div>
-            <div className="text-sm text-gray-300">Happy Visitors</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">100+</div>
-            <div className="text-sm text-gray-300">Activities</div>
+          {/* Glassmorphism Search Bar */}
+          <div className="mx-auto max-w-2xl">
+            <div className="flex items-center gap-2 rounded-2xl bg-white/10 backdrop-blur-md p-2 shadow-2xl border border-white/20">
+              <div className="flex flex-1 items-center gap-2 px-3">
+                <Search className="h-5 w-5 text-white/70" />
+                <input
+                  type="text"
+                  placeholder="Search farms, activities, or produce..."
+                  className="w-full py-2 bg-transparent outline-none text-white placeholder:text-white/50"
+                />
+              </div>
+              <Button className="bg-primary hover:bg-primary/80 text-white rounded-xl px-6 shadow-lg border border-white/20">
+                Search
+              </Button>
+            </div>
           </div>
         </div>
       </div>

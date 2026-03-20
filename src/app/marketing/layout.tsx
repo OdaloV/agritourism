@@ -1,5 +1,5 @@
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import { BottomNav } from "@/components/layout/BottomNav";
 
 export default function MarketingLayout({
   children,
@@ -7,10 +7,11 @@ export default function MarketingLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background">
       <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
+      <main className="flex-1 pb-16">{children}</main>{" "}
+      {/* pb-16 for bottom nav */}
+      <BottomNav />
     </div>
   );
 }
