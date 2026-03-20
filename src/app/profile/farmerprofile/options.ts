@@ -4,8 +4,6 @@ export interface FarmerProfileData {
   profilePhoto: File | null
   farmName: string
   farmLocation: string
-  gpsCoordinates: string
-  farmSize: string
   yearEstablished: string
   farmDescription: string
   
@@ -36,7 +34,7 @@ export interface FarmerProfileData {
   businessLicense: File | null
   insuranceDocs: File | null
   certifications: File[]
-  NaionalID: File | null
+  nationalID: File | null
 }
 
 
@@ -86,10 +84,6 @@ export const ACTIVITY_CATEGORIES = {
   'Wellness & Nature': [
     'Yoga Retreats', 'Meditation Sessions', 'Forest Bathing',
     'Nature Walks', 'Bird Watching', 'Stargazing'
-  ],
-  'Photography': [
-    'Photography Sessions', 'Sunset Photo Ops',
-    'Professional Photo Shoots', 'Engagement Photos'
   ],
   'Unique Stays': [
     'Farm Stay Accommodation', 'Glamping', 'Camping'
