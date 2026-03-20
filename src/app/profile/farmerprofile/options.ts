@@ -1,9 +1,9 @@
-
 export interface FarmerProfileData {
   // Step 1: Farm Information
   profilePhoto: File | null
   farmName: string
   farmLocation: string
+  farmSize: string
   yearEstablished: string
   farmDescription: string
   
@@ -17,11 +17,14 @@ export interface FarmerProfileData {
   
   // Step 3: Activities
   activities: string[]
+  customActivities: string[]
   newActivityInput: string
   newActivityCategory: string
   
   // Step 4: Facilities & Accommodation
   facilities: string[]
+  customfacilities: string[]
+  newFacilityInput: string
   accommodation: boolean
   accommodationDetails: string
   maxGuests: string
@@ -36,7 +39,6 @@ export interface FarmerProfileData {
   certifications: File[]
   nationalID: File | null
 }
-
 
 export const ANIMAL_OPTIONS = [
   'Cows', 'Goats', 'Sheep', 'Chickens', 'Pigs', 'Horses', 

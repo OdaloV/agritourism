@@ -17,6 +17,8 @@ export default function FarmerProfilePage() {
     validationErrors,
     allAnimals,
     allCrops,
+    allActivities,
+    allFacilities,
     canProceed,
     handleInputChange,
     handleCheckboxChange,
@@ -38,39 +40,18 @@ export default function FarmerProfilePage() {
   const onAddCustomAnimal = () => handleAddCustomItem('animal', formData.newAnimalInput)
   const onAddCustomCrop = () => handleAddCustomItem('crop', formData.newCropInput)
   const onAddCustomActivity = () => handleAddCustomItem('activity', formData.newActivityInput, formData.newActivityCategory)
+  const onAddCustomFacility = () => handleAddCustomItem('facility', formData.newFacilityInput)
+  
   const onRemoveCustomAnimal = (animal: string) => handleRemove('animal', animal)
   const onRemoveCustomCrop = (crop: string) => handleRemove('crop', crop)
   const onRemoveActivity = (activity: string) => handleRemove('activity', activity)
+  const onRemoveFacility = (facility: string) => handleRemove('facility', facility)
 
   // Step 1: Farm Information
-  if (currentStep === 1) {
-    // Farm info form with name, location, description, etc.
-  }
-
   // Step 2: Animals & Crops
-  if (currentStep === 2) {
-    // Animals and crops selection with custom additions
-  }
-
   // Step 3: Activities
-  if (currentStep === 3) {
-    // Activities selection by category with custom additions
-  }
-
   // Step 4: Facilities & Accommodation
-  if (currentStep === 4) {
-    // Facilities checkboxes and accommodation options
-  }
-
   // Step 5: Media
-  if (currentStep === 5) {
-    // Photo and video uploads
-  }
-
   // Step 6: Verification & Summary
-  if (currentStep === 6) {
-    // Document uploads and profile summary
-  }
-
   // Navigation buttons with Previous/Next/Submit
 }
