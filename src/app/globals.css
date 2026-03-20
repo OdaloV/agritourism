@@ -1,83 +1,45 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@source "../../components/";
+@source "../../app/";
 
-@layer base {
-  :root {
-    --background: 210 40% 98%; /* Mist Grey #f8fafc */
-    --foreground: 222 47% 11%; /* Basalt Black #020617 */
+@theme {
+  --color-background: #f8fafc;
+  --color-foreground: #020617;
+  --color-card: #ffffff;
+  --color-card-foreground: #020617;
+  --color-primary: #166534;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #991b1b;
+  --color-secondary-foreground: #ffffff;
+  --color-accent: #eab308;
+  --color-accent-foreground: #020617;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #475569;
+  --color-destructive: #991b1b;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #166534;
 
-    --card: 0 0% 100%; /* Pure White */
-    --card-foreground: 222 47% 11%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-
-    --primary: 142 70% 25%; /* Deep Tea Leaf #166534 */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 72% 35%; /* Highland Red #991b1b */
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 25% 27%;
-
-    --accent: 45 93% 47%; /* Maize Gold #eab308 */
-    --accent-foreground: 222 47% 11%;
-
-    --destructive: 0 72% 35%; /* Highland Red for destructive */
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 142 70% 25%;
-
-    --radius: 1rem;
-  }
-
-  .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
-
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 142 70% 35%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 72% 45%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 45 93% 47%;
-    --accent-foreground: 222 47% 11%;
-
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 142 70% 35%;
-  }
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+  --radius-xl: 1.5rem;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--color-border);
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
+    font-family: "Inter", system-ui, sans-serif;
   }
 
   h1,
@@ -86,6 +48,6 @@
   h4,
   h5,
   h6 {
-    @apply font-heading;
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
   }
 }
